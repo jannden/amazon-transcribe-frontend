@@ -1,0 +1,5 @@
+aws.js
+.cache
+dist
+node_modules
+package-lock.json

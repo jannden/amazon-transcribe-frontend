@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazon Transcribe</title>
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+    <script defer type="text/javascript" src="./src/main.js"></script>
+  </head>
+
+  <body>
+    <div id="mainContainer">
+      <div id="textContainer">
+        <h1>Amazon Transcribe</h1>
+        <p>Here are three different ways to implement it:</p>
+        <ol>
+          <li>Purely front-end implementation using the JS library</li>
+          <li>Full-stack implementation using AWS sockets</li>
+          <li>Full-stack implementation using the JS library</li>
+        </ol>
+        <p>
+          The backend code is not in this repo. Please refer to
+          <a href="https://medium.com/@jannden/a56c14b87db2">my article</a>.
+        </p>
+        <p>
+          In order to run this demo, you have to update either your AWS access
+          keys (for the first options), or the backend API to get the AWS socket
+          url (for the second option), or the backend socket url (for the third
+          option).
+        </p>
+      </div>
+      <div id="recordButtonContainer">
+        <button
+          id="recordFrontend"
+          class="recordInactive"
+          onclick="onRecordFrontendPress()"
+        >
+          pure front-end
+        </button>
+        <button
+          id="recordSocket"
+          class="recordInactive"
+          onclick="onRecordSocketPress()"
+        >
+          through aws socket
+        </button>
+        <button
+          id="recordApi"
+          class="recordInactive"
+          onclick="onRecordApiPress()"
+        >
+          through backend api
+        </button>
+      </div>
+
+      <div id="headerText"><h2>Transcription</h2></div>
+      <div id="transcribedText"></div>
+      <button class="button" onclick="clearTranscription()">Clear</button>
+    </div>
+  </body>
+</html>
